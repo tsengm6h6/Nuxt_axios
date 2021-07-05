@@ -27,7 +27,7 @@ export default {
   },
   async asyncData({ params, $axios }) {
     // 取得關鍵字的專輯，設定 10 筆資料
-    const response = await $axios.get(`https://itunes.apple.com/search?term=${params.id}&entity=album&limit=10`)
+    const response = await $axios.get(`/search?term=${params.id}&entity=album&limit=10`)
     return { results: response.data.results } // async 取得資料可直接當 data 使用
   },
   computed: {
