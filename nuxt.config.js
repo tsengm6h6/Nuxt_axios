@@ -15,11 +15,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  //
+  // static page setting
   target: 'static',
-  router: {
-    base: '/Nuxt_axios/'
-  },
+  // router: {
+  //   base: '/Nuxt_axios/'
+  // },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -42,11 +42,19 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+<<<<<<< HEAD
     '@nuxtjs/proxy'
   ],
 
   proxy: [
     'https://itunes.apple.com/search'
+=======
+    // '@nuxtjs/proxy'
+  ],
+
+  proxy: [
+    // 'https://itunes.apple.com/search'
+>>>>>>> 8468519d9e5875c65ba42a6d386aa6c2a28a079c
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
