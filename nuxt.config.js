@@ -1,3 +1,10 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/Nuxt_axios/'
+  }
+} : {}
+
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -17,9 +24,7 @@ export default {
   },
   // static page setting
   target: 'static',
-  router: {
-    base: '/Nuxt_axios/'
-  },
+  ...routerBase,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -50,7 +55,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
